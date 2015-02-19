@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Synthesizer</title>
+</head>
+<body >
+<h1 align="center" id="check" style="color:red">Synth on Web</h1>
+<script src="Synth.js"></script>
+<div align="center">
+ <label for="wavetypes" >Wave Type</label>
+    <select id="wavetypes">
+      <option value="sine">Sine</option>
+      <option value="triangle">Triangle</option>
+      <option value="sawtooth">Sawtooth</option>
+      <option value="square">Square</option>
+    </select>
+    <button type="button" onclick="startaudio()">Play</button>
+	<button type="button" onclick="stopaudio()">Pause</button>
+  <button type="button" onclick="reload()">Reset</button>
+	<br/>
+</div>
+<br/>
+<div align="center">
+Frequency: <input id="frequency" type="range" min="0" max="1000" step="1" value="440" onchange="changeFrequency(this.value)">
+<td></td><output id="Hz" value=""></output>Hz
+</div> 
+<div align="center">
+Volume: <input id="volume" type="range" min="0" max="1" step="0.1" value="0.5" onchange="changeVolume(this.value)">
+</div>
+<br/>
+<div align="center">
+<button type="button" onclick="changeeffect()">Effects</button>
+</div> 
+</body>
+</html>
